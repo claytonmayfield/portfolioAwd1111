@@ -1,0 +1,268 @@
+#nav {
+  margin-bottom: 15px;
+}
+
+#name {
+  font-family: 'Times New Roman';
+}
+#me{
+  border-radius: 50%;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+}
+#aboutInfo{
+  font-size: 25px;
+}
+
+#textBox {
+  width: 500px;
+}
+#navInfo{
+  font-size: large;
+  font-family: 'Times New Roman';
+}
+body {
+
+  background-color: hsla(200, 40%, 30%, .4);
+  background-image:
+    url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'),
+    url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+    url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+    url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+    url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+  background-repeat: repeat-x;
+  background-position:
+    0 20%,
+    0 100%,
+    0 50%,
+    0 100%,
+    0 0;
+  background-size:
+    2500px,
+    800px,
+    500px 200px,
+    1000px,
+    400px 260px;
+  animation: 50s para infinite linear;
+}
+
+@keyframes para {
+  100% {
+    background-position:
+      -5000px 20%,
+      -800px 95%,
+      500px 50%,
+      1000px 100%,
+      400px 0;
+  }
+}
+
+.blurred-box {
+  position: relative;
+
+  background: inherit;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+
+#fancy {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+
+#fancy #fancyTwo {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+#fancy #fancyTwo:before,
+#fancy #fancyTwo:after {
+  position: absolute;
+  content: "Contact";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid white;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#fancy #fancyTwo:before {
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+
+#fancy #fancyTwo:after {
+  color: white;
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+#fancy #fancyTwo:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  background: white;
+  border: 2px solid black;
+  box-shadow: 5px 5px 0 black,
+    -5px -5px 0 black,
+    -5px 5px 0 black,
+    5px -5px 0 black;
+  /* transition: 500ms ease-in-out; */
+}
+
+button:hover {
+  box-shadow: 20px 5px 0 white, -20px -5px 0 white;
+}
+
+button:focus {
+  outline: none;
+}
+
+#resume {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+
+#resume #resumeTwo {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+#resume #resumeTwo:before,
+#resume #resumeTwo:after {
+  position: absolute;
+  content: "Resume";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid white;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#resume #resumeTwo:before {
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+
+#resume #resumeTwo:after {
+  color: white;
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+#resume #resumeTwo:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+@media screen and (max-width: 420px) {
+  #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+  }
+  #me{
+    border-radius: 0%;
+  }
+  #formContact{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 300px;
+ 
+  }
+  #textBox{
+    width: 200px;
+  }
+  #mulitBTN{
+ 
+    width: 100px;
+  font-size: 15px;
+  }
+  #bodyCenter{
+   
+  
+    
+  }
+  #imgBTN{
+    margin-left: 55px;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 375px) {
+  #mulitBTN{
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 414px) {
+  #mulitBTN{
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #mulitBTN{
+    margin-left: 18px;
+    width: 70px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 280px) {
+  #mulitBTN{
+    margin-left: 10px;
+    width: 70px;
+    font-size: 15px;
+  }
+}
